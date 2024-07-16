@@ -1,0 +1,25 @@
+# Mandatory. This slug will be used for the URL of the assignment.
+# The slug should NOT be changed if possible. If the following slug would change
+# then the assignment with slug "hello" would be disabled, and a new assignment
+# would be created in ACCESS. To students who already submitted solutions, it
+# would appear as if all their data is gone.
+slug = "hello"
+
+# Mandatory.
+# Assignments will be invisible to regular users until the start date.
+# Users will be able to submit solutions between the start and end date.
+# After the end date, users will be able to see the assignment and run code, but they may not submit solutions.
+# They will also see files marked as "solution" in individual tasks.
+start = 2020-01-01T13:00:00
+end = 2020-01-12T13:00:00
+
+# Mandatory. List of directory paths containing the tasks.
+# ACCESS will show tasks in the order in which they are listed here.
+"tasks" = [
+  "hello_world"
+]
+
+# Information for at least one language must be specified.
+[information.en]
+title = "Hello, World!"
+

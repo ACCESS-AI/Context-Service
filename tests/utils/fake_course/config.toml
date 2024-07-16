@@ -1,0 +1,55 @@
+# Mandatory. This slug will be used for the URL of the course.
+slug = "access-mock-course"
+
+# Path to optional logo for the course. If absent, a generic logo will be shown.
+logo = "python.svg"
+
+# Mandatory. List of directory paths containing the assignments.
+# ACCESS will show assignments in the order in which they are listed here
+# (regardless of dates defined in assignments). Note that assignments are
+# identified by the slug defined in their config.toml, so the directory name
+# does not matter and may be changed without affecting ACCESS.
+"assignments" = [
+  "01_intro",
+  "02_basics",
+  "03_classes"
+]
+
+# Mandatory. Determines who can see the course in ACCESS at any given time.
+# Visibility can be one of three things:
+#   "hidden": only administrators can see the course.
+#   "registered": only users registered for the course can enter it.
+#   "public": anyone can enter the course and solve exercises.
+# The (optional) override specifies a scheduled change in visibility.
+# In this example, the course is hidden by default but becomes visible for
+# registered students
+[visibility]
+default = "hidden"
+override = "registered"
+override_start = 2023-01-01T13:00:00
+# if the end date is unspecified, the override applies indefinitely
+override_end = 2028-01-01T13:00:00
+
+# Information for at least one language must be specified.
+[information.en]
+title = "ACCESS Mock Course"
+description = "This course demonstrates how to define ACCESS courses, assignments and tasks."
+university = "University of Zurich"
+period = "Spring Semester 2023"
+
+# Additional languages
+[information.de]
+title = "ACCESS Demo-Kurs"
+description = "Dieser Kurs demonstriert, wie man ACCESS-Kurse, -Übungen und -Aufgaben definiert."
+university = "Universität Zürich"
+period = "Frühlings-Semester 2023"
+
+# Files specified here will be copied into every execution.
+# Particularily useful for code shared by all grading tests.
+# For now, only grading files are supported.
+[global_files]
+grading = [
+  "universal/harness.py",
+  "universal/testing_task_harness.py",
+]
+

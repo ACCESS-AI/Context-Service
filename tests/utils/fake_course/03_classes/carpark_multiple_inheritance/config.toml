@@ -1,0 +1,48 @@
+slug = "carpark-multiple-inheritance"
+
+max_attempts = 5
+refill = 43200 # 12 hours
+max_points = 4
+
+[information.en]
+title = "Car Types"
+instructions_file = "instructions_en.md"
+
+[evaluator]
+docker_image = "python:latest"
+run_command = "python -m task.script"
+test_command = "python -m unittest discover -v task"
+grade_command = "python -m grading.tests"
+
+[files]
+visible = [
+  "task/script.py",
+  "task/car.py",
+  "task/combustion_car.py",
+  "task/electric_car.py",
+  "task/hybrid_car.py",
+  "task/tests.py",
+  "resource/cars.png",
+]
+editable = [
+  "task/script.py",
+  "task/car.py",
+  "task/combustion_car.py",
+  "task/electric_car.py",
+  "task/hybrid_car.py",
+  "task/tests.py",
+]
+grading = [
+  "grading/tests.py",
+  "grading/tests_1_inheritance.py",
+  "grading/tests_2a_combustion_car.py",
+  "grading/tests_2b_electric_car.py",
+  "grading/tests_2c_hybrid_car.py",
+]
+solution = [
+  "solution/car.py",
+  "solution/combustion_car.py",
+  "solution/electric_car.py",
+  "solution/hybrid_car.py",
+]
+

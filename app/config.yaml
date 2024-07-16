@@ -1,0 +1,6 @@
+---
+embedder:
+  name: Mistral
+vectorstore:
+  name: Milvus
+...
